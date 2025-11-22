@@ -1,0 +1,35 @@
+run:
+  timeout: 3m
+  tests: true
+
+output:
+  format: colored-line-number
+
+linters-settings:
+  govet:
+    check-shadowing: true
+
+  revive:
+    rules:
+      - name: exported
+        disabled: true
+
+  gofmt:
+    simplify: true
+
+linters:
+  disable-all: true
+  enable:
+    - govet
+    - staticcheck
+    - gosimple
+    - ineffassign
+    - errcheck
+    - gofmt
+    - goimports
+    - revive
+
+issues:
+  exclude-use-default: false
+  max-issues-per-linter: 0
+  max-same-issues: 0
