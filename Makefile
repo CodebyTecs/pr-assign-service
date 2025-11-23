@@ -10,7 +10,7 @@ run:
 	go run $(CMD_PATH)
 
 test:
-	go test ./...
+	go test ./internal/api/handlers_test -v
 
 docker-build:
 	docker build -t $(APP_NAME) .

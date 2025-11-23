@@ -10,7 +10,7 @@ type Router struct {
 	mux *http.ServeMux
 }
 
-func NewRouter(userHandler *handlers.UserHandler, teamHandler handlers.TeamHandler, prHandler handlers.PRHandler, statsHandler handlers.StatsHandler) *Router {
+func NewRouter(userHandler *handlers.UserHandler, teamHandler *handlers.TeamHandler, prHandler *handlers.PRHandler, statsHandler *handlers.StatsHandler) *Router {
 	mux := http.NewServeMux()
 
 	mux.HandleFunc("/users/setIsActive", userHandler.SetIsActive)
